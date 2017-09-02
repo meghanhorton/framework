@@ -1,0 +1,56 @@
+// ******
+// TABLES
+// ******
+
+table.table{
+	width: 100%;
+	cursor: pointer;
+
+	td,th{
+		padding: $padding-table-cell;
+		border-bottom-color: $border-color-table;
+		border-bottom-style: solid;
+	}
+
+	td{
+		border-bottom-width: 1px;
+	}
+
+	thead td, th{
+		font-weight: $font-weight-bold;
+		text-align: left;
+		border-bottom-width: $border-width-thead;
+	}
+
+	// STRIPED
+	&.table-striped{
+		tbody{
+			tr:nth-child(odd){
+				td{
+					background: $background-color-table-striped;
+				}
+			}
+		}
+	}
+
+	// HOVER
+	&.table-hover{
+		tr:hover{
+			td{
+				background: $background-color-table-hover;
+				border-bottom-color: darken($border-color-table,5%);
+			}
+		}
+	}
+
+	// ACTIVE
+	&,&.table-striped,&.table-hover{
+		tr.active,tr:nth-child(odd).active{
+			td{
+				background: $background-color-table-hover;
+				border-bottom-color: darken($border-color-table,5%);
+			}
+		}
+		
+	}
+}

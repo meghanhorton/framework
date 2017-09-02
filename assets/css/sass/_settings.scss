@@ -2,18 +2,20 @@
 // SCALING UNIT
 // ************
 
-	$base: 				10px !default; // Font-size: 20px
+	$base: 				9px !default; // Font-size: 20px
+	$container-width: 	800px !default; // 800px
 
 // ******
 // COLORS
 // ******
 	
-	$background-color: 			#fff !default;
-	$gray-base: 				#333 !default;
-	$gray-light: 				lighten($gray-base,60%) !default;
+	$background-color: 			#FFFFFF !default;
+	$gray-base: 				#212121 !default;
+	$gray-light: 				#E0E0E0 !default;
+	$gray-lighter: 				#FAFAFA !default;
 
 	// LINK
-	$link-color: 				#03a9f4 !default;
+	$link-color: 				#7E57C2 !default;
 	$link-hover-color: 			darken($link-color,15%) !default;
 	$link-visited-color: 		$link-color !default;	
 	$link-underline-weight: 	2px !default;	
@@ -25,7 +27,7 @@
 // LAYOUT
 // ******
 	
-	$container-width: 			80 * $base !default;
+	
 	$container-alignment: 		center !default; // center, left
 
 	$padding-base: 				$base $base*2 !default; // 10px 20px
@@ -33,7 +35,7 @@
 	$padding-small: 			$base/2 $base !default; // 5px 10px
 
 	$margin-base: 				$base*2 0 !default;
-	$margin-large: 				$base*4 0 !default;
+	$margin-large: 				$base*6 0 !default;
 	$margin-small: 				$base 0 !default;
 
 // *****
@@ -43,6 +45,7 @@
 	$font-family-base: 			'Work Sans', sans-serif !default;
 
 	$font-size-base: 			$base*2 !default;
+	$font-size-small: 			$base*1.5 !default;
 	$line-height-base:			1.5 !default;
 	$font-weight-base: 			300 !default;
 	$font-weight-bold: 			600 !default;
@@ -79,6 +82,20 @@
 	$padding-blockquote: 		$base $base $base $base*2 !default;
 
 	$font-size-blockquote-cite: 0.9rem !default;
+
+// ******
+// TABLES
+// ******
+
+	$padding-table-cell:				$base $base/2 !default;
+	$border-color-table: 				$gray-light !default;
+	$border-width-thead: 				$link-underline-weight !default;
+
+	// STRIPED
+	$background-color-table-striped: 	$gray-lighter !default;
+
+	// HOVER
+	$background-color-table-hover: 		darken($background-color-table-striped,5%) !default;
 
 // **********
 // BREAKPOINT

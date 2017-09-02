@@ -1,0 +1,91 @@
+// ************
+// SCALING UNIT
+// ************
+
+	$base: 				10px !default; // Font-size: 20px
+
+// ******
+// COLORS
+// ******
+	
+	$background-color: 			#fff !default;
+	$gray-base: 				#333 !default;
+	$gray-light: 				lighten($gray-base,60%) !default;
+
+	// LINK
+	$link-color: 				#03a9f4 !default;
+	$link-hover-color: 			darken($link-color,15%) !default;
+	$link-visited-color: 		$link-color !default;	
+	$link-underline-weight: 	2px !default;	
+
+	// TEXT
+	$color-highlight: 			lighten(#fbc02d,30%) !default;
+
+// ******
+// LAYOUT
+// ******
+	
+	$container-width: 			80 * $base !default;
+	$container-alignment: 		center !default; // center, left
+
+	$padding-base: 				$base $base*2 !default; // 10px 20px
+	$padding-large: 			$base*2 $base*4 !default; // 20px 40px
+	$padding-small: 			$base/2 $base !default; // 5px 10px
+
+	$margin-base: 				$base*2 0 !default;
+	$margin-large: 				$base*4 0 !default;
+	$margin-small: 				$base 0 !default;
+
+// *****
+// FONTS
+// *****
+
+	$font-family-base: 			'Work Sans', sans-serif !default;
+
+	$font-size-base: 			$base*2 !default;
+	$line-height-base:			1.5 !default;
+	$font-weight-base: 			300 !default;
+	$font-weight-bold: 			600 !default;
+
+	// HEADINGS
+	$font-size-h1: 				$font-size-base * 2.5 !default;
+	$font-size-h2: 				$font-size-base * 2 !default;
+	$font-size-h3: 				$font-size-base * 1.75 !default;
+	$font-size-h4: 				$font-size-base * 1.5 !default;
+	$font-size-h5: 				$font-size-base * 1.25 !default;
+	$font-size-h6: 				$font-size-base;
+
+	$font-family-heading: 		$font-family-base !default;
+	$line-height-heading: 		1.25 !default;
+	$margin-heading: 			$base*2 0 !default;
+	$font-weight-heading: 		$font-weight-bold !default;
+
+	// PRE, CODE
+	$font-family-code: 			'Consolas','Courier',monospace !default;
+	$font-size-code: 			$font-size-base * 0.8 !default;
+
+	$color-code: 				#e06870 !default;
+	$background-color-code:  	#fdf4f4 !default;
+
+	$color-pre: 				#667189 !default;
+	$background-color-pre:  	#f8f9fa !default;
+
+	// BLOCKQUOTE
+	$font-family-blockquote: 	$font-family-base !default;
+	$font-size-blockquote: 		$font-size-base !default;
+	$font-weight-blockquote: 	$font-weight-bold !default;
+
+	$line-weight-blockquote: 	$link-underline-weight !default;
+	$padding-blockquote: 		$base $base $base $base*2 !default;
+
+	$font-size-blockquote-cite: 0.9rem !default;
+
+// **********
+// BREAKPOINT
+// **********
+
+// *********
+// ANIMATION
+// *********
+	$transition-timing: 			0.5s;
+	$transition-timing-function: 	cubic-bezier(0.4, 0.0, 0.2, 1); 

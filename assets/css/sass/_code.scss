@@ -1,0 +1,42 @@
+// *********
+// PRE, CODE
+// *********
+
+	pre, code{
+		font-family: $font-family-code;
+		padding: $padding-base;
+	}
+
+	code{
+		display: inline;
+		background: $background-color-code;
+		color: $color-code;
+		line-height: 1;
+		padding: 0.25em 0.5em;
+		font-size: 0.9em;
+	}
+
+	pre{
+		display: block;
+		font-size: $font-size-code;
+		position: relative;
+		margin: $margin-base;
+		background: $background-color-pre;
+		color: $color-pre;
+
+		code{
+			line-height: $line-height-base;
+			background: none;
+			color: inherit;
+		}
+
+		&:before{
+			content: attr(data-lang);
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: $padding-small;
+			color: lighten($color-pre,25%);
+			background: darken($background-color-pre,2.5%);
+		}
+	}

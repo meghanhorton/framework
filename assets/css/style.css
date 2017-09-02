@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,600");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5; }
+
+p {
+  margin: 20px 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.25;
+  margin: 20px 0;
+  font-weight: 600; }
+
+h1, .h1 {
+  font-size: 50px; }
+
+h2, .h2 {
+  font-size: 40px; }
+
+h3, .h3 {
+  font-size: 35px; }
+
+h4, .h4 {
+  font-size: 30px; }
+
+h5, .h5 {
+  font-size: 25px; }
+
+h6, .h6 {
+  font-size: 20px; }
+
+b, strong {
+  font-weight: 600; }
+
+em, i, var, cite {
+  font-style: italic; }
+
+mark {
+  background: #feedc3; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+blockquote {
+  border-left: 2px solid #cccccc;
+  padding: 10px 10px 10px 20px; }
+  blockquote p, blockquote q {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0; }
+  blockquote cite {
+    font-size: 0.9rem; }
+
+a:not(.btn) {
+  color: #03a9f4;
+  text-decoration: none;
+  text-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  a:not(.btn):after {
+    content: "";
+    position: absolute;
+    background: #03a9f4;
+    display: block;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  a:not(.btn):visited {
+    color: #03a9f4; }
+    a:not(.btn):visited:after {
+      background: #03a9f4; }
+  a:not(.btn):hover {
+    color: #0275a8; }
+    a:not(.btn):hover:after {
+      background: #0275a8;
+      width: 0; }
+
+ul, ol {
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 20px;
+  margin: 20px 0; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin: 0; }
+
+ol {
+  list-style-type: decimal; }
+  ol ol {
+    list-style-type: lower-alpha; }
+    ol ol ol {
+      list-style-type: lower-roman; }
+
+ul.unstyled, ol.unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto; }
+
+section {
+  margin: 40px 0; }
+  section > section {
+    padding-left: 20px; }
+
+pre, code {
+  font-family: "Consolas", "Courier", monospace;
+  padding: 10px 20px; }
+
+code {
+  display: inline;
+  background: #fdf4f4;
+  color: #e06870;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  font-size: 0.9em; }
+
+pre {
+  display: block;
+  font-size: 16px;
+  position: relative;
+  margin: 20px 0;
+  background: #f8f9fa;
+  color: #667189; }
+  pre code {
+    line-height: 1.5;
+    background: none;
+    color: inherit; }
+  pre:before {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    color: #adb3c2;
+    background: #f1f3f5; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+// *******
+// BUTTONS
+// *******
+
+a,input,button{
+	&.btn{
+		background: transparent;
+		color: transparent;
+		border-width: 1px;
+		border-style: solid;
+		transition: all $transition-timing $transition-timing-function;
+
+		// Colors
+		@include make-button-outline($btn-color-variants);
+		@include make-button-solid($btn-color-variants);
+
+		// Sizes
+		// @include make-button-sizes($btn-size-variants);
+		
+
+		// Link
+		&.btn-link{
+			border-color: transparent;
+		}
+	}
+}

@@ -162,7 +162,25 @@ ul.unstyled, ol.unstyled {
   padding: 0; }
 
 .container {
+  padding-right: 13.5px;
+  padding-left: 13.5px;
   margin: 0 auto; }
+  @media (min-width: 576px) {
+    .container {
+      padding-right: 13.5px;
+      padding-left: 13.5px; } }
+  @media (min-width: 768px) {
+    .container {
+      padding-right: 13.5px;
+      padding-left: 13.5px; } }
+  @media (min-width: 992px) {
+    .container {
+      padding-right: 13.5px;
+      padding-left: 13.5px; } }
+  @media (min-width: 1200px) {
+    .container {
+      padding-right: 13.5px;
+      padding-left: 13.5px; } }
   @media (min-width: 576px) {
     .container {
       width: 540px;
@@ -173,18 +191,53 @@ ul.unstyled, ol.unstyled {
       max-width: 100%; } }
   @media (min-width: 992px) {
     .container {
-      width: 960px;
+      width: 900px;
       max-width: 100%; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1140px;
+      width: 960px;
       max-width: 100%; } }
 
 section {
   margin: 54px 0; }
   @media (min-width: 992px) {
     section > section {
-      padding-left: 18px; } }
+      padding-left: 27px; } }
+
+a.btn, input.btn, button.btn {
+  background: transparent;
+  color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  a.btn, input.btn, button.btn {
+    background: transparent;
+    color: #7E57C2;
+    border-color: #7E57C2; }
+    a.btn:hover, input.btn:hover, button.btn:hover {
+      color: #643da9;
+      border-color: #643da9; }
+  a.btn.btn-danger, input.btn.btn-danger, button.btn.btn-danger {
+    background: transparent;
+    color: #F44336;
+    border-color: #F44336; }
+    a.btn.btn-danger:hover, input.btn.btn-danger:hover, button.btn.btn-danger:hover {
+      color: #ea1c0d;
+      border-color: #ea1c0d; }
+  a.btn.btn-solid, input.btn.btn-solid, button.btn.btn-solid {
+    background: #7E57C2;
+    color: #fff;
+    border-color: transparent; }
+    a.btn.btn-solid:hover, input.btn.btn-solid:hover, button.btn.btn-solid:hover {
+      background: #643da9; }
+  a.btn.btn-solid.btn-danger, input.btn.btn-solid.btn-danger, button.btn.btn-solid.btn-danger {
+    background: #F44336;
+    color: #fff;
+    border-color: transparent; }
+    a.btn.btn-solid.btn-danger:hover, input.btn.btn-solid.btn-danger:hover, button.btn.btn-solid.btn-danger:hover {
+      background: #ea1c0d; }
+  a.btn.btn-link, input.btn.btn-link, button.btn.btn-link {
+    border-color: transparent; }
 
 pre, code {
   font-family: "Consolas", "Courier", monospace;

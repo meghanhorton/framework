@@ -6,6 +6,7 @@
 
 	.container{
 		// SET WIDTHS
+		@include make-container();
 		@include make-container-max-widths();
 		
 		// ALIGNMENT
@@ -23,7 +24,7 @@
 
 		@include media-breakpoint-up(lg) {
 			> section{
-				padding-left: $base*2;
+				padding-left: $grid-gutter-width-base;
 			}
 		}
 		

@@ -3,6 +3,7 @@
 // ************
 
 	$base: 				9px !default; // Font-size: 20px
+	$border-width:      2px !default;
 
 // ******
 // COLORS
@@ -13,11 +14,13 @@
 	$gray-light: 				#E0E0E0 !default;
 	$gray-lighter: 				#FAFAFA !default;
 
+	$color-danger: 				#F44336 !default;
+
 	// LINK
 	$link-color: 				#7E57C2 !default;
 	$link-hover-color: 			darken($link-color,15%) !default;
 	$link-visited-color: 		$link-color !default;	
-	$link-underline-weight: 	2px !default;	
+	$link-underline-weight: 	$border-width !default;	
 
 	// TEXT
 	$color-highlight: 			lighten(#fbc02d,30%) !default;
@@ -77,10 +80,38 @@
 	$font-size-blockquote: 		$font-size-base !default;
 	$font-weight-blockquote: 	$font-weight-bold !default;
 
-	$line-weight-blockquote: 	$link-underline-weight !default;
+	$line-weight-blockquote: 	$border-width !default;
 	$padding-blockquote: 		$base $base $base $base*2 !default;
 
 	$font-size-blockquote-cite: 0.9rem !default;
+
+// *******
+// BUTTONS
+// *******
+
+	// COLORS
+	$btn-color-variants: (
+		default: $link-color,
+		danger: $color-danger
+	) !default;
+
+	// SIZES
+	$btn-size-variants: (
+		default: (
+			font-size: $font-size-base,
+			padding: $base $base*2
+		),
+		small: (
+			font-size: $font-size-small,
+			padding: $base/2 $base,
+			border-width: $border-width/2
+		),
+		large: (
+			font-size: $font-size-base*1.25,
+			padding: $base*2 $base*4,
+			border-width: $border-width*1.5
+		)
+	) !default;
 
 // ******
 // TABLES
@@ -88,7 +119,7 @@
 
 	$padding-table-cell:				$base $base/2 !default;
 	$border-color-table: 				$gray-light !default;
-	$border-width-thead: 				$link-underline-weight !default;
+	$border-width-thead: 				$border-width !default;
 
 	// STRIPED
 	$background-color-table-striped: 	$gray-lighter !default;
@@ -100,7 +131,20 @@
 // BREAKPOINTS
 // ***********
 
-	$gutter: $base * 4 			!default;
+	
+	// Grid columns
+	//
+	// Set the number of columns and specify the width of the gutters.
+
+	$grid-columns:               12 !default;
+	$grid-gutter-width-base:     $base*3 !default;
+	$grid-gutter-widths: (
+	  xs: $grid-gutter-width-base,
+	  sm: $grid-gutter-width-base,
+	  md: $grid-gutter-width-base,
+	  lg: $grid-gutter-width-base,
+	  xl: $grid-gutter-width-base
+	) !default;
 
 	// Grid breakpoints
 	$grid-breakpoints: (
@@ -116,8 +160,8 @@
 	$container-max-widths: (
 	  sm: 540px,
 	  md: 720px,
-	  lg: 960px,
-	  xl: 1140px
+	  lg: 900px,
+	  xl: 960px
 	) !default !global;
 
 // *********

@@ -1,0 +1,85 @@
+// BUTTON MIXINS
+
+// *********************
+// BUTTON COLOR VARIANTS
+// *********************
+
+	// OUTLINED BUTTONS
+	@mixin make-button-outline($colors: $btn-color-variants){
+		@each $label, $color in $colors{
+			// For default buttons with no classes, set default color
+			@if $label == default{
+				&{
+					@include button-outline($color);
+				}
+			// For other classes, set .btn-[color]
+			} @else {
+				&.btn-#{$label}{
+					@include button-outline($color);
+				}
+			}
+		}
+	}
+
+		// CREATE OUTLINE BUTTONS BASED ON COLOR
+		@mixin button-outline($color){
+			background: transparent;
+			color: $color;
+			border-color: $color;
+
+			&:hover{
+				color: darken($color,10%);
+				border-color: darken($color,10%);
+			}
+		}
+
+	// SOLID BUTTONS
+	@mixin make-button-solid($colors: $btn-color-variants){
+		@each $label, $color in $colors{
+			// For default buttons with no classes, set default color
+			@if $label == default{
+				&.btn-solid{
+					@include button-solid($color);
+				}
+			// For other classes, set .btn-[color]
+			} @else {
+				&.btn-solid.btn-#{$label}{
+					@include button-solid($color);
+				}
+			}
+		}
+	}
+		// CREATE OUTLINE BUTTONS BASED ON COLOR
+		@mixin button-solid($color,$font-color: #fff){
+			background: $color;
+			color: $font-color;
+			border-color: transparent;
+
+			&:hover{
+				background: darken($color,10%);
+			}
+		}
+
+// *********************
+// BUTTON SIZE VARIANTS
+// *********************
+
+	@mixin make-button-sizes($sizes: $btn-size-variants){
+		@each $label, $size in $sizes{
+			// @debug "#{$label} #{$size}";
+			// For default buttons with no classes, set default color
+			// @if $label == default{
+			// 	&{
+			// 		@include button-outline($color);
+			// 	}
+			// // For other classes, set .btn-[color]
+			// } @else {
+			// 	&.btn-#{$label}{
+			// 		@include button-outline($color);
+			// 	}
+			// }
+		}
+	}
+
+		// Button size
+		// @mixin make-button-size($sizes: )

@@ -162,13 +162,29 @@ ul.unstyled, ol.unstyled {
   padding: 0; }
 
 .container {
-  max-width: 800px;
   margin: 0 auto; }
+  @media (min-width: 576px) {
+    .container {
+      width: 540px;
+      max-width: 100%; } }
+  @media (min-width: 768px) {
+    .container {
+      width: 720px;
+      max-width: 100%; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 960px;
+      max-width: 100%; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px;
+      max-width: 100%; } }
 
 section {
   margin: 54px 0; }
-  section > section {
-    padding-left: 18px; }
+  @media (min-width: 992px) {
+    section > section {
+      padding-left: 18px; } }
 
 pre, code {
   font-family: "Consolas", "Courier", monospace;

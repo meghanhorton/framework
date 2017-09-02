@@ -5,8 +5,10 @@
 // CONTAINER
 
 	.container{
-		max-width: $container-width;
-
+		// SET WIDTHS
+		@include make-container-max-widths();
+		
+		// ALIGNMENT
 		@if $container-alignment == "center" {
 			margin: 0 auto;
 		} @else if $container-alignment == "left" {
@@ -14,13 +16,15 @@
 		}
 	}
 
-
 // SECTION
 
 	section{
 		margin: $margin-large;
 
-		> section{
-			padding-left: $base*2;
+		@include media-breakpoint-up(lg) {
+			> section{
+				padding-left: $base*2;
+			}
 		}
+		
 	}

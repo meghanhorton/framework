@@ -3,7 +3,6 @@
 // ************
 
 	$base: 				9px !default; // Font-size: 20px
-	$container-width: 	800px !default; // 800px
 
 // ******
 // COLORS
@@ -97,9 +96,29 @@
 	// HOVER
 	$background-color-table-hover: 		darken($background-color-table-striped,5%) !default;
 
-// **********
-// BREAKPOINT
-// **********
+// ***********
+// BREAKPOINTS
+// ***********
+
+	$gutter: $base * 4 			!default;
+
+	// Grid breakpoints
+	$grid-breakpoints: (
+	  xs: 0,
+	  sm: 576px,
+	  md: 768px,
+	  lg: 992px,
+	  xl: 1200px
+	);
+
+
+	// Grid containers
+	$container-max-widths: (
+	  sm: 540px,
+	  md: 720px,
+	  lg: 960px,
+	  xl: 1140px
+	) !default !global;
 
 // *********
 // ANIMATION

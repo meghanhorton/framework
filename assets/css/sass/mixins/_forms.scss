@@ -1,0 +1,99 @@
+// ******************
+// FORM SIZE VARIANTS
+// ******************
+
+	// *******
+	// INPUTS
+	// *******
+		@mixin make-form-sizes($sizes: $form-size-variants, $class: input){
+			@each $label, $size in $sizes{
+				$font-size: 	map-get($size,'font-size');
+				$padding: 		map-get($size,'padding');
+				$border-width: 	map-get($size,'border-width');
+
+				// For default buttons with no classes, set default color
+				@if $label == default{
+					&{
+						@include make-form-size($font-size,$padding,$border-width);
+					}
+				} @else {
+					&.#{$class}-#{$label}{
+						@include make-form-size($font-size,$padding,$border-width);
+					}
+				}
+			}
+		}
+
+		// Element size
+		@mixin make-form-size($font-size: $font-size-base, $padding: $base $base*2, $border-width: $border-width){
+			font-size: $font-size;
+			padding: $padding;
+			border-width: $border-width;
+			line-height: $line-height-base;
+		}
+
+	// *******
+	// SELECTS
+	// *******
+
+		// Make select arrows
+		@mixin make-select-arrows($sizes: $form-size-variants, $class: input){
+			@each $label, $size in $sizes{
+				$font-size: 	map-get($size,'font-size');
+				$padding: 		map-get($size,'padding');
+
+				// For default buttons with no classes, set default color
+				@if $label == default{
+					&{
+						@include make-select-arrow($font-size*0.75,$padding);
+					}
+				} @else {
+					&.#{$class}-#{$label}{
+						@include make-select-arrow($font-size*0.75,$padding);
+					}
+				}
+			}
+		}
+
+		// Select arrow positions
+		@mixin make-select-arrow($size: $font-size-base, $padding: $base $base*2){
+			background-size: $size;
+			background-position: right split-values($padding,horizontal) center;
+		}
+
+	// ********************
+	// RADIO AND CHECKBOXES 
+	// ********************
+
+		// Radio and checks
+		@mixin make-radio-checks($sizes: $form-size-variants, $class: input){
+			@each $label, $size in $sizes{
+				$font-size: 	map-get($size,'font-size');
+				$padding: 		map-get($size,'padding');
+
+				// For default buttons with no classes, set default color
+				@if $label == default{
+					& {
+						padding-left: $font-size*1.5;
+						padding-right: split-values($padding,horizontal);
+
+						.form-display{
+							@include make-radio-check($font-size,$padding);
+						}
+					}
+				} @else {
+					&.#{$class}-#{$label} {
+						.form-display{
+							@include make-radio-check($font-size,$padding);
+						}
+					}
+				}
+			}
+		}
+
+		// Make sizes
+		@mixin make-radio-check($size: $font-size-base, $padding: $base $base*2){
+			width: $size;
+			height: $size;
+		}
+

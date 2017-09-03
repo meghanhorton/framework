@@ -210,7 +210,6 @@ a.btn, input[type="button"].btn, button.btn {
   margin: 9px 0;
   font-family: "Work Sans", sans-serif;
   background: transparent;
-  background-color: transparent;
   color: transparent;
   border-color: transparent;
   border-width: 2px;
@@ -571,6 +570,133 @@ pre {
     padding: 4.5px 9px;
     color: #adb3c2;
     background: #f1f3f5; }
+
+.form-group {
+  margin: 18px 0; }
+
+:not(.form-inline) label.form-label,
+:not(.form-inline) input, :not(.form-inline) textarea, :not(.form-inline) select {
+  display: block;
+  box-sizing: border-box; }
+
+label.form-label {
+  font-weight: 600;
+  font-size: 13.5px; }
+
+input:not([type="button"]),
+textarea,
+select {
+  font-family: "Work Sans", sans-serif;
+  border-color: #E0E0E0;
+  border-style: solid;
+  width: 100%;
+  outline: none;
+  margin: 2.25px 0; }
+  input:not([type="button"]),
+  textarea,
+  select {
+    font-size: 18px;
+    padding: 9px 18px;
+    border-width: 2px;
+    line-height: 1.5; }
+  input:not([type="button"]).input-small,
+  textarea.input-small,
+  select.input-small {
+    font-size: 13.5px;
+    padding: 4.5px 9px;
+    border-width: 2px;
+    line-height: 1.5; }
+  input:not([type="button"]).input-large,
+  textarea.input-large,
+  select.input-large {
+    font-size: 22.5px;
+    padding: 18px 36px;
+    border-width: 2px;
+    line-height: 1.5; }
+  input:not([type="button"])::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: #6e6e6e; }
+  input:not([type="button"]):active, input:not([type="button"]).active, input:not([type="button"]):focus,
+  textarea:active,
+  textarea.active,
+  textarea:focus,
+  select:active,
+  select.active,
+  select:focus {
+    border-color: #7E57C2; }
+
+select {
+  width: 100%;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  select:not([multiple]) {
+    background: #FFFFFF url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23667189' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat; }
+    select:not([multiple]) {
+      background-size: 13.5px;
+      background-position: right 18px center; }
+    select:not([multiple]).input-small {
+      background-size: 10.125px;
+      background-position: right 9px center; }
+    select:not([multiple]).input-large {
+      background-size: 16.875px;
+      background-position: right 36px center; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto; }
+
+label.form-radio:not(.form-switch),
+label.form-checkbox:not(.form-switch) {
+  position: relative; }
+  label.form-radio:not(.form-switch) .form-display,
+  label.form-checkbox:not(.form-switch) .form-display {
+    display: inline-block;
+    border: thin solid #E0E0E0;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+  label.form-radio:not(.form-switch) input,
+  label.form-checkbox:not(.form-switch) input {
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px; }
+  label.form-radio:not(.form-switch) input:checked + .form-display,
+  label.form-checkbox:not(.form-switch) input:checked + .form-display {
+    background: #7E57C2; }
+  label.form-radio:not(.form-switch) input:focus + .form-display,
+  label.form-radio:not(.form-switch) input:active + .form-display,
+  label.form-checkbox:not(.form-switch) input:focus + .form-display,
+  label.form-checkbox:not(.form-switch) input:active + .form-display {
+    box-shadow: 0px 0px 0px 2px #e3daf2; }
+  label.form-radio:not(.form-switch),
+  label.form-checkbox:not(.form-switch) {
+    padding-left: 27px;
+    padding-right: 18px; }
+    label.form-radio:not(.form-switch) .form-display,
+    label.form-checkbox:not(.form-switch) .form-display {
+      width: 18px;
+      height: 18px; }
+  label.form-radio:not(.form-switch).input-small .form-display,
+  label.form-checkbox:not(.form-switch).input-small .form-display {
+    width: 13.5px;
+    height: 13.5px; }
+  label.form-radio:not(.form-switch).input-large .form-display,
+  label.form-checkbox:not(.form-switch).input-large .form-display {
+    width: 22.5px;
+    height: 22.5px; }
+
+label.form-radio .form-display {
+  border-radius: 50%; }
+
+label.form-checkbox .form-display {
+  border-radius: 10%; }
 
 table.table {
   width: 100%;

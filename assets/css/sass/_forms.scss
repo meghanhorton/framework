@@ -1,0 +1,129 @@
+// *****
+// FORMS
+// *****
+
+	// FORM GROUP
+	.form-group{
+		margin: $margin-base;
+	}
+
+	// FORM ALIGNMENTS
+	:not(.form-inline){
+		label.form-label,
+		input,textarea,select{
+			display: block;
+			box-sizing: border-box;
+		}
+	}
+
+	// LABEL
+	label.form-label{
+		font-weight: $font-weight-label;
+		font-size: $font-size-label;
+	}
+
+	// TYPES OF INPUTS
+
+		// INPUT, TEXTAREA, SELECT
+		input:not([type="button"]),
+		textarea,
+		select{
+			font-family: $font-family-base;
+			border-color: $border-color-input;
+			border-style: solid;
+			width: 100%;
+			outline: none;
+			margin: $margin-input;
+
+			// Makes .input-small, .input-large
+			@include make-form-sizes();
+
+			&::placeholder{
+				color: $placeholder-color-input;
+			}
+
+			&:active,&.active,&:focus{
+				border-color: $border-color-active-input;
+			}
+		}
+
+		// SELECT
+		select{
+			width: 100%;
+			border-radius: 0;
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+
+			&:not([multiple]){
+				background: $background-color url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23667189' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat;
+			    @include make-select-arrows();
+			}
+		}
+
+		// RADIO / CHECKBOXES
+		input[type="radio"],
+		input[type="checkbox"]{
+			display: inline-block;
+			width: auto;
+		}
+
+		label.form-radio:not(.form-switch),
+		label.form-checkbox:not(.form-switch){
+			position: relative;
+
+			.form-display{
+				display: inline-block;
+				border: thin solid $border-color-input;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			// Hide default input
+			input{
+				clip: rect(0, 0, 0, 0);
+			    height: 1px;
+			    margin: -1px;
+			    overflow: hidden;
+			    position: absolute;
+			    width: 1px;
+			}
+
+			input:checked { 
+				& + .form-display{
+					background: $color-checkbox;
+				}
+			}
+ 
+			input:focus + .form-display,
+			input:active + .form-display{
+				box-shadow: 0px 0px 0px $border-width $color-active;
+			}
+
+			@include make-radio-checks();
+		}
+
+		label.form-radio{
+			input[type="radio"]{
+
+			}
+
+			.form-display{
+				border-radius: 50%;
+			}
+		}
+
+		label.form-checkbox{
+			input[type="checkbox"]{
+
+			}
+
+			.form-display{
+				border-radius: 10%;
+			}
+		}
+
+
+
+

@@ -24,13 +24,15 @@
 	$link-visited-color: 	         $link-color !default;	
 	$link-underline-weight:        $border-width !default;	
 
+  // ACTIVE
+  $color-active:                lighten($link-color,35%) !default;
+
 	// TEXT
 	$color-highlight:              lighten($color-warning,30%) !default;
 
 // ******
 // LAYOUT
 // ******
-	
 	
 	$container-alignment:          center !default; // center, left
 
@@ -120,6 +122,39 @@
 
 	$btn-disable-percentage: 		30% !default;
 
+// *******
+// FORMS
+// *******
+
+  // COLORS
+  $border-color-input:        $gray-light !default;
+  $border-color-active-input: $link-color !default;
+  $color-checkbox:            $link-color !default;
+  $placeholder-color-input:   disable($gray-base) !default;
+  $margin-input:              $base/4 0 !default;
+
+  $font-weight-label:         $font-weight-bold !default;
+  $font-size-label:           $font-size-small !default;
+
+	// SIZES
+	$form-size-variants: (
+		default: (
+      font-size: $font-size-base,
+      padding: $base $base*2,
+      border-width: $border-width
+    ),
+    small: (
+      font-size: $font-size-small,
+      padding: $base/2 $base,
+      border-width: $border-width
+    ),
+    large: (
+      font-size: $font-size-base*1.25,
+      padding: $base*2 $base*4,
+      border-width: $border-width
+    )
+	) !default;
+
 // ******
 // TABLES
 // ******
@@ -133,6 +168,8 @@
 
 	// HOVER
 	$background-color-table-hover: 		darken($background-color-table-striped,5%) !default;
+
+
 
 // ***********
 // BREAKPOINTS
@@ -174,5 +211,6 @@
 // *********
 // ANIMATION
 // *********
+
 	$transition-timing: 			0.5s;
 	$transition-timing-function: 	cubic-bezier(0.4, 0.0, 0.2, 1); 

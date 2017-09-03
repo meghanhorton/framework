@@ -36,5 +36,47 @@
 			}
 		}
 	}
+}
+
+// Split margins or padding
+// Acceptable direction values: vertical, horizontal, top, right, bottom, left
+@function split-values($value,$direction: vertical){
+	$length: length($value);
+
+	// If the direction has one value, use it
+	@if $length == 1{
+		@return $value;
+	}
+
+	// If the direction has two values, use first for vertical, use second for horizontal
+	@else if $length == 2{
+		// If vertical, use first value
+		@if $direction == vertical {
+			@return nth($value,1);
+		}
+		// If horizontal, use second value
+		@else {
+			@return nth($value,2);
+		}
+	}
 	
+	// If four values
+	@else {
+		// If vertical or top, use first
+		@if ($direction == vertical) or ($direction == top){
+			@return nth($value,1);
+		}
+		// If horizontal or right, use second
+		@else if ($direction == horizontal) or ($direction == right){
+			@return nth($value,2);
+		}
+		// If bottom, use third
+		@else if $direction == bottom {
+			@return nth($value,3);
+		}
+		// If left
+		@else if $direction == left {
+			@return nth($value,4);
+		}
+	}
 }

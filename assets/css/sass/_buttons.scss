@@ -4,23 +4,36 @@
 
 a,input,button{
 	&.btn{
+		display: block;
+		margin: $margin-small;
+		font-family: $font-family-base;
 		background: transparent;
 		color: transparent;
-		border-width: 1px;
+		border-color: transparent;
+		border-width: $border-width;
 		border-style: solid;
-		transition: all $transition-timing $transition-timing-function;
+		transition: 
+			background $transition-timing $transition-timing-function,
+			color $transition-timing $transition-timing-function,
+			border-color $transition-timing $transition-timing-function;
+		outline: none;
 
 		// Colors
 		@include make-button-outline($btn-color-variants);
 		@include make-button-solid($btn-color-variants);
 
 		// Sizes
-		// @include make-button-sizes($btn-size-variants);
+		@include make-button-sizes($btn-size-variants);
 		
 
 		// Link
 		&.btn-link{
-			border-color: transparent;
+			@include make-button-link($btn-color-variants);
+		}
+
+		// Inline
+		&.btn-inline{
+			display: inline-block;
 		}
 	}
 }

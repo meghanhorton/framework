@@ -22,14 +22,25 @@
 	}
 
 		// CREATE OUTLINE BUTTONS BASED ON COLOR
-		@mixin button-outline($color){
+		@mixin button-outline($color,$hover-font-color:#fff){
 			background: transparent;
 			color: $color;
-			border-color: $color;
 
-			&:hover{
-				color: darken($color,10%);
-				border-color: darken($color,10%);
+			&:not(.btn-link){
+				border-color: $color;
+
+				&:hover{
+					color: $hover-font-color;
+					background: darken($color,20%);
+					border-color: darken($color,20%);
+				}
+
+				&:active{
+					color: $hover-font-color;
+					background: darken($color,20%);
+					border-color: darken($color,20%);
+					outline: solid lighten($color,35%);
+				}
 			}
 		}
 
@@ -56,9 +67,31 @@
 			border-color: transparent;
 
 			&:hover{
-				background: darken($color,10%);
+				background: darken($color,20%);
+				color: $font-color;
+			}
+
+			&:active{
+				outline: solid lighten($color,35%);
 			}
 		}
+
+	// LINK BUTTONS
+	@mixin make-button-link($colors: $btn-color-variants){
+		@each $label, $color in $colors{
+			// For default buttons with no classes, set default color
+			@if $label == default{
+				&.btn-link{
+					@include underline($color);
+				}
+			// For other classes, set .btn-[color]
+			} @else {
+				&.btn-link.btn-#{$label}{
+					@include underline($color);
+				}
+			}
+		}
+	}
 
 // *********************
 // BUTTON SIZE VARIANTS
@@ -66,20 +99,27 @@
 
 	@mixin make-button-sizes($sizes: $btn-size-variants){
 		@each $label, $size in $sizes{
-			// @debug "#{$label} #{$size}";
+			$font-size: 	map-get($size,'font-size');
+			$padding: 		map-get($size,'padding');
+			$border-width: 	map-get($size,'border-width');
+
 			// For default buttons with no classes, set default color
-			// @if $label == default{
-			// 	&{
-			// 		@include button-outline($color);
-			// 	}
-			// // For other classes, set .btn-[color]
-			// } @else {
-			// 	&.btn-#{$label}{
-			// 		@include button-outline($color);
-			// 	}
-			// }
+			@if $label == default{
+				&{
+					@include make-button-size($font-size,$padding,$border-width);
+				}
+			// For other classes, set .btn-[color]
+			} @else {
+				&.btn-#{$label}{
+					@include make-button-size($font-size,$padding,$border-width);
+				}
+			}
 		}
 	}
 
 		// Button size
-		// @mixin make-button-size($sizes: )
+		@mixin make-button-size($font-size: $font-size-base, $padding: $base $base*2, $border-width: $border-width){
+			font-size: $font-size;
+			padding: $padding;
+			border-width: $border-width;
+		}

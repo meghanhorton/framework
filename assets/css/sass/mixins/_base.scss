@@ -1,0 +1,34 @@
+// **************
+// GENERAL MIXINS
+// **************
+
+
+
+// Underline
+@mixin underline($color:$link-color,$border-width: $border-width){
+	text-decoration: none;
+	text-shadow: 
+		-#{$border-width} $border-width 0px $background-color, 
+		$border-width $border-width 0px $background-color;
+   	white-space: nowrap;
+   	position: relative;
+
+	&:after{
+		content: "";
+		position: absolute;
+		background: $color;
+		display: block;
+		left: 0;
+		bottom: -$border-width/2;
+		width: 100%;
+		height: $border-width;
+		z-index: -1;
+		transition: width $transition-timing $transition-timing-function;
+	}
+
+	&:hover{
+		&:after{
+			width: 0;
+		}
+	}
+}

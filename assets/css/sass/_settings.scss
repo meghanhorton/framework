@@ -15,6 +15,8 @@
 	$gray-lighter: 				#FAFAFA !default;
 
 	$color-danger: 				#F44336 !default;
+	$color-warning: 			#FFC107 !default;
+	$color-success: 			#8BC34A !default;
 
 	// LINK
 	$link-color: 				#7E57C2 !default;
@@ -23,7 +25,7 @@
 	$link-underline-weight: 	$border-width !default;	
 
 	// TEXT
-	$color-highlight: 			lighten(#fbc02d,30%) !default;
+	$color-highlight: 			lighten($color-warning,30%) !default;
 
 // ******
 // LAYOUT
@@ -92,6 +94,8 @@
 	// COLORS
 	$btn-color-variants: (
 		default: $link-color,
+		success: $color-success,
+		warning: $color-warning,
 		danger: $color-danger
 	) !default;
 
@@ -99,17 +103,18 @@
 	$btn-size-variants: (
 		default: (
 			font-size: $font-size-base,
-			padding: $base $base*2
+			padding: $base $base*2,
+			border-width: $border-width
 		),
 		small: (
 			font-size: $font-size-small,
 			padding: $base/2 $base,
-			border-width: $border-width/2
+			border-width: $border-width
 		),
 		large: (
 			font-size: $font-size-base*1.25,
 			padding: $base*2 $base*4,
-			border-width: $border-width*1.5
+			border-width: $border-width
 		)
 	) !default;
 

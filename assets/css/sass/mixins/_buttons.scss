@@ -11,35 +11,50 @@
 			@if $label == default{
 				&{
 					@include button-outline($color);
+
+					&:disabled,&.disabled{
+						@include button-outline(disable($color));
+					}
 				}
 			// For other classes, set .btn-[color]
 			} @else {
 				&.btn-#{$label}{
 					@include button-outline($color);
+
+					&:disabled,&.disabled{
+						@include button-outline(disable($color));
+					}
 				}
 			}
 		}
 	}
 
 		// CREATE OUTLINE BUTTONS BASED ON COLOR
-		@mixin button-outline($color,$hover-font-color:#fff){
+		@mixin button-outline($color,$disabled: false,$hover-font-color:#fff){
 			background: transparent;
 			color: $color;
 
 			&:not(.btn-link){
 				border-color: $color;
 
-				&:hover{
-					color: $hover-font-color;
-					background: darken($color,20%);
-					border-color: darken($color,20%);
-				}
+				@if $disabled == false {
+          &:not(:disabled):not(.disabled){
+  					&:hover{
+  						color: $hover-font-color;
+  						background: darken($color,20%);
+  						border-color: darken($color,20%);
+  					}
 
-				&:active{
-					color: $hover-font-color;
-					background: darken($color,20%);
-					border-color: darken($color,20%);
-					outline: solid lighten($color,35%);
+  					&:active,&.active{
+  						color: $hover-font-color;
+  						background: darken($color,20%);
+  						border-color: darken($color,20%);
+  					}
+
+            &:active{
+              outline: solid lighten($color,35%);
+            }
+          }
 				}
 			}
 		}
@@ -51,28 +66,40 @@
 			@if $label == default{
 				&.btn-solid{
 					@include button-solid($color);
+
+					&:disabled,&.disabled{
+						@include button-solid(disable($color),true);
+					}
 				}
 			// For other classes, set .btn-[color]
 			} @else {
 				&.btn-solid.btn-#{$label}{
 					@include button-solid($color);
+
+					&:disabled,&.disabled{
+						@include button-solid(disable($color),true);
+					}
 				}
 			}
 		}
 	}
 		// CREATE OUTLINE BUTTONS BASED ON COLOR
-		@mixin button-solid($color,$font-color: #fff){
+		@mixin button-solid($color,$disabled: false,$font-color: #fff){
 			background: $color;
 			color: $font-color;
 			border-color: transparent;
 
-			&:hover{
-				background: darken($color,20%);
-				color: $font-color;
-			}
+			@if $disabled == false {
+        &:not(:disabled):not(.disabled){
+  				&:hover{
+  					background: darken($color,20%);
+  					color: $font-color;
+  				}
 
-			&:active{
-				outline: solid lighten($color,35%);
+  				&:active{
+  					outline: solid lighten($color,35%);
+  				}
+        }
 			}
 		}
 
@@ -83,11 +110,19 @@
 			@if $label == default{
 				&.btn-link{
 					@include underline($color);
+
+          &:disabled,&.disabled{
+            @include underline(disable($color),$link-underline-weight,true);
+          }
 				}
 			// For other classes, set .btn-[color]
 			} @else {
 				&.btn-link.btn-#{$label}{
-					@include underline($color);
+          @include underline($color);
+
+          &:disabled,&.disabled{
+            @include underline(disable($color),$link-underline-weight,true);
+          }
 				}
 			}
 		}

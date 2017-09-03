@@ -2,10 +2,13 @@
 // GENERAL MIXINS
 // **************
 
-
+// Disabled color
+@function disable($color,$percentage: $btn-disable-percentage){
+	@return lighten($color,$percentage);
+}
 
 // Underline
-@mixin underline($color:$link-color,$border-width: $border-width){
+@mixin underline($color:$link-color,$border-width: $border-width,$disabled: false){
 	text-decoration: none;
 	text-shadow: 
 		-#{$border-width} $border-width 0px $background-color, 
@@ -26,9 +29,12 @@
 		transition: width $transition-timing $transition-timing-function;
 	}
 
-	&:hover{
-		&:after{
-			width: 0;
+	@if $disabled == false{
+		&:hover{
+			&:after{
+				width: 0;
+			}
 		}
 	}
+	
 }

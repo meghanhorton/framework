@@ -2,90 +2,90 @@
 // SCALING UNIT
 // ************
 
-	$base: 				9px !default; // Font-size: 20px
-	$border-width:      2px !default;
+	$base: 				                9px !default; // Font-size: 20px
+	$border-width:                2px !default;
 
 // ******
 // COLORS
 // ******
 	
-	$background-color: 			#FFFFFF !default;
-	$gray-base: 				#212121 !default;
-	$gray-light: 				#E0E0E0 !default;
-	$gray-lighter: 				#FAFAFA !default;
+	$background-color:             #FFFFFF !default;
+	$gray-base:                    #212121 !default;
+	$gray-light:                   #E0E0E0 !default;
+	$gray-lighter:                 #FAFAFA !default;
 
-	$color-danger: 				#F44336 !default;
-	$color-warning: 			#FFC107 !default;
-	$color-success: 			#8BC34A !default;
+	$color-danger: 				         #F44336 !default;
+	$color-warning: 			         #FFC107 !default;
+	$color-success: 			         #8BC34A !default;
 
 	// LINK
-	$link-color: 				#7E57C2 !default;
-	$link-hover-color: 			darken($link-color,15%) !default;
-	$link-visited-color: 		$link-color !default;	
-	$link-underline-weight: 	$border-width !default;	
+	$link-color:                   #7E57C2 !default;
+	$link-hover-color:             darken($link-color,15%) !default;
+	$link-visited-color: 	         $link-color !default;	
+	$link-underline-weight:        $border-width !default;	
 
 	// TEXT
-	$color-highlight: 			lighten($color-warning,30%) !default;
+	$color-highlight:              lighten($color-warning,30%) !default;
 
 // ******
 // LAYOUT
 // ******
 	
 	
-	$container-alignment: 		center !default; // center, left
+	$container-alignment:          center !default; // center, left
 
-	$padding-base: 				$base $base*2 !default; // 10px 20px
-	$padding-large: 			$base*2 $base*4 !default; // 20px 40px
-	$padding-small: 			$base/2 $base !default; // 5px 10px
+	$padding-base:                 $base $base*2 !default; // 10px 20px
+	$padding-large:                $base*2 $base*4 !default; // 20px 40px
+	$padding-small:                $base/2 $base !default; // 5px 10px
 
-	$margin-base: 				$base*2 0 !default;
-	$margin-large: 				$base*6 0 !default;
-	$margin-small: 				$base 0 !default;
+	$margin-base:                  $base*2 0 !default;
+	$margin-large:                 $base*6 0 !default;
+	$margin-small:                 $base 0 !default;
 
 // *****
 // FONTS
 // *****
 
-	$font-family-base: 			'Work Sans', sans-serif !default;
+	$font-family-base: 			       'Work Sans', sans-serif !default;
 
-	$font-size-base: 			$base*2 !default;
-	$font-size-small: 			$base*1.5 !default;
-	$line-height-base:			1.5 !default;
-	$font-weight-base: 			300 !default;
-	$font-weight-bold: 			600 !default;
+	$font-size-base: 			         $base*2 !default;
+	$font-size-small: 			       $base*1.5 !default;
+	$line-height-base:			       1.5 !default;
+	$font-weight-base: 			       300 !default;
+	$font-weight-bold: 			       600 !default;
 
 	// HEADINGS
-	$font-size-h1: 				$font-size-base * 2.5 !default;
-	$font-size-h2: 				$font-size-base * 2 !default;
-	$font-size-h3: 				$font-size-base * 1.75 !default;
-	$font-size-h4: 				$font-size-base * 1.5 !default;
-	$font-size-h5: 				$font-size-base * 1.25 !default;
-	$font-size-h6: 				$font-size-base;
+	$font-size-h1: 				         $font-size-base * 2.5 !default;
+	$font-size-h2: 				         $font-size-base * 2 !default;
+	$font-size-h3: 				         $font-size-base * 1.75 !default;
+	$font-size-h4: 				         $font-size-base * 1.5 !default;
+	$font-size-h5: 				         $font-size-base * 1.25 !default;
+	$font-size-h6: 				         $font-size-base;
 
-	$font-family-heading: 		$font-family-base !default;
-	$line-height-heading: 		1.25 !default;
-	$margin-heading: 			$base*2 0 !default;
-	$font-weight-heading: 		$font-weight-bold !default;
+	$font-family-heading:          $font-family-base !default;
+	$line-height-heading:          1.25 !default;
+	$margin-heading:               $base*2 0 !default;
+	$font-weight-heading:          $font-weight-bold !default;
 
 	// PRE, CODE
-	$font-family-code: 			'Consolas','Courier',monospace !default;
-	$font-size-code: 			$font-size-base * 0.8 !default;
+	$font-family-code:             'Consolas','Courier',monospace !default;
+	$font-size-code:               $font-size-base * 0.8 !default;
 
-	$color-code: 				#e06870 !default;
-	$background-color-code:  	#fdf4f4 !default;
+	$color-code:                   #e06870 !default;
+	$background-color-code:        #fdf4f4 !default;
 
-	$color-pre: 				#667189 !default;
-	$background-color-pre:  	#f8f9fa !default;
+	$color-pre:                    #667189 !default;
+	$background-color-pre:         #f8f9fa !default;
 
 	// BLOCKQUOTE
-	$font-family-blockquote: 	$font-family-base !default;
-	$font-size-blockquote: 		$font-size-base !default;
-	$font-weight-blockquote: 	$font-weight-bold !default;
+	$font-family-blockquote: 	     $font-family-base !default;
+	$font-size-blockquote: 		     $font-size-base !default;
+	$font-weight-blockquote: 	     $font-weight-bold !default;
 
-	$line-weight-blockquote: 	$border-width !default;
-	$padding-blockquote: 		$base $base $base $base*2 !default;
+	$line-weight-blockquote: 	     $border-width !default;
+	$padding-blockquote: 		       $base $base $base $base*2 !default;
 
-	$font-size-blockquote-cite: 0.9rem !default;
+	$font-size-blockquote-cite:    0.9rem !default;
 
 // *******
 // BUTTONS
@@ -117,6 +117,8 @@
 			border-width: $border-width
 		)
 	) !default;
+
+	$btn-disable-percentage: 		30% !default;
 
 // ******
 // TABLES

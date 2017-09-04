@@ -155,7 +155,7 @@
 				<h5>Colors</h5><button class="btn btn-inline">.btn</button> <button class="btn btn-inline btn-success">.btn.btn-success</button> <button class="btn btn-inline btn-warning">.btn.btn-warning</button> <button class="btn btn-inline btn-danger">.btn.btn-danger</button>
 			</section>
 			<section id="button-sizes">
-				<h5>Sizes</h5><button class="btn btn-small btn-inline">.btn.btn-small</button> <button class="btn btn-inline">.btn</button> <button class="btn btn-large btn-inline">.btn.btn-large</button>
+				<h5>Sizes</h5><button class="btn btn-sm btn-inline">.btn.btn-sm</button> <button class="btn btn-inline">.btn</button> <button class="btn btn-lg btn-inline">.btn.btn-lg</button>
 			</section>
 			<section id="button-states">
 				<h5>States</h5>
@@ -164,6 +164,8 @@
 		</section>
 		<section id="forms">
 			<h3>Forms</h3>
+
+      <p><strong>Sizing:</strong> To scale an <code>input</code>, <code>textarea</code>, or <code>select</code> box you may apply the <code>input-sm</code> or <code>input-lg</code> classes.</p>
 
       <div class="form-group">
         <label class="form-label" for="name">Plain text</label>
@@ -186,7 +188,7 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="dropdown">Dropdown</label>
+        <label class="form-label" for="dropdown">Select</label>
         <select name="dropdown" required="required">
           <option>Choose an option</option>
           <option value="android">Android</option>
@@ -204,19 +206,36 @@
         </select>
       </div>
 
+      <pre><code>&lt;!-- form select control -->
+&lt;div class="form-group">
+  &lt;select class="form-select">
+    &lt;option>Choose an option&lt;/option>
+    ...
+  &lt;/select>
+&lt;/div></code></pre>
+      
+      <p><strong>Sizing:</strong> To scale a <code>checkbox</code> or <code>radio button</code>, you may apply the <code>input-sm</code> or <code>input-lg</code> classes.</p>
+
       <div class="form-group">
         <label class="form-label">Radio button</label>
         <label class="form-radio">
-          <input type="radio" name="gender" checked /> 
+          <input type="radio" name="radio" checked /> 
           <span class="form-display"></span>
-          Male
+          Yes
         </label>
         <label class="form-radio">
-          <input type="radio" name="gender" />
+          <input type="radio" name="radio" />
           <span class="form-display"></span>
-          Female
+          No
         </label>
       </div>
+
+      <pre><code>&lt;!-- radio buttons -->
+&lt;label class="form-radio">
+  &lt;input type="radio" name="name" checked /> 
+  &lt;span class="form-display">&lt;/span>
+  Label
+&lt;/label></code></pre>
 
       <div class="form-group">
         <label for="" class="form-label">Checkbox</label>
@@ -226,6 +245,29 @@
           Remember me
         </label>
       </div>
+
+      <pre><code>&lt;!-- checkbox -->
+&lt;label class="form-checkbox">
+  &lt;input type="checkbox" name="remember"/>
+  &lt;span class="form-display">&lt;/span>
+  Label
+&lt;/label></code></pre>
+
+      <div class="form-group">
+        <label for="" class="form-label">Switch</label>
+        <label class="form-switch">
+          <input type="checkbox" name="onoff"/>
+          <span class="form-display"></span>
+          Receive emails
+        </label>
+      </div>
+
+      <pre><code>&lt;!-- checkbox -->
+&lt;label class="form-switch">
+  &lt;input type="checkbox" name="switch"/>
+  &lt;span class="form-display">&lt;/span>
+  Label
+&lt;/label></code></pre>
 
 		</section>
 	</div>

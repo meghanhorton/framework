@@ -129,3 +129,79 @@
 			}
 		}
 
+	// ********
+	// SWITCHES 
+	// ********
+
+		// Switches
+		@mixin make-switches($sizes: $form-size-variants, $class: input){
+			@each $label, $size in $sizes{
+				$font-size: 	map-get($size,'font-size');
+				$padding: 		map-get($size,'padding');
+
+				// For default buttons with no classes, set default color
+				@if $label == default{
+					& {
+						font-size: $font-size;
+						padding-left: $font-size*2.75;
+						padding-right: split-values($padding,horizontal);
+
+						.form-display{
+							@include make-switch($font-size,$padding);
+						}
+					}
+				} @else {
+					&.#{$class}-#{$label} {
+						font-size: $font-size;
+						padding-left: $font-size*2.75;
+						padding-right: split-values($padding,horizontal);
+
+						.form-display{
+							@include make-switch($font-size,$padding);
+						}
+					}
+				}
+			}
+		}
+
+		// Individual switch
+		@mixin make-switch($size: $font-size-base, $padding: $base $base*2){
+			width: ceil($size * 2);
+			height: ceil($size);
+			border-radius: ceil($size/2);
+		}
+
+		// Radio button circle sizes
+		@mixin make-switch-inserts($sizes: $form-size-variants, $class: input){
+			@each $label, $size in $sizes{
+				$font-size: 	ceil(map-get($size,'font-size'));
+
+				// For default buttons with no classes, set default color
+				@if $label == default{
+					input + .form-display:after{
+						width: $font-size;
+						height: $font-size;
+						border-radius: ceil($font-size/2);
+					}
+
+					input:checked + .form-display:after{
+						margin-left: $font-size;
+					}
+				} @else {
+					&.#{$class}-#{$label} {
+						input + .form-display:after{
+							width: $font-size;
+							height: $font-size;
+							border-radius: ceil($font-size/2);
+						}
+
+						input:checked + .form-display:after{
+							margin-left: $font-size;
+						}
+					}
+
+					
+				}
+			}
+		}
+

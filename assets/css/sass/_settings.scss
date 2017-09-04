@@ -108,12 +108,12 @@
 			padding: $base $base*2,
 			border-width: $border-width
 		),
-		small: (
+		sm: (
 			font-size: $font-size-small,
 			padding: $base/2 $base,
 			border-width: $border-width
 		),
-		large: (
+		lg: (
 			font-size: $font-size-base*1.25,
 			padding: $base*2 $base*4,
 			border-width: $border-width
@@ -143,12 +143,12 @@
       padding: $base $base*2,
       border-width: $border-width
     ),
-    small: (
+    sm: (
       font-size: $font-size-small,
       padding: $base/2 $base,
       border-width: $border-width
     ),
-    large: (
+    lg: (
       font-size: $font-size-base*1.25,
       padding: $base*2 $base*4,
       border-width: $border-width

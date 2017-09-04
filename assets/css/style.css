@@ -392,11 +392,11 @@ a.btn, input[type="button"].btn, button.btn {
     font-size: 18px;
     padding: 9px 18px;
     border-width: 2px; }
-  a.btn.btn-small, input[type="button"].btn.btn-small, button.btn.btn-small {
+  a.btn.btn-sm, input[type="button"].btn.btn-sm, button.btn.btn-sm {
     font-size: 13.5px;
     padding: 4.5px 9px;
     border-width: 2px; }
-  a.btn.btn-large, input[type="button"].btn.btn-large, button.btn.btn-large {
+  a.btn.btn-lg, input[type="button"].btn.btn-lg, button.btn.btn-lg {
     font-size: 22.5px;
     padding: 18px 36px;
     border-width: 2px; }
@@ -599,16 +599,16 @@ select {
     padding: 9px 18px;
     border-width: 2px;
     line-height: 1.5; }
-  input:not([type="button"]).input-small,
-  textarea.input-small,
-  select.input-small {
+  input:not([type="button"]).input-sm,
+  textarea.input-sm,
+  select.input-sm {
     font-size: 13.5px;
     padding: 4.5px 9px;
     border-width: 2px;
     line-height: 1.5; }
-  input:not([type="button"]).input-large,
-  textarea.input-large,
-  select.input-large {
+  input:not([type="button"]).input-lg,
+  textarea.input-lg,
+  select.input-lg {
     font-size: 22.5px;
     padding: 18px 36px;
     border-width: 2px;
@@ -637,10 +637,10 @@ select {
     select:not([multiple]) {
       background-size: 13.5px;
       background-position: right 18px center; }
-    select:not([multiple]).input-small {
+    select:not([multiple]).input-sm {
       background-size: 10.125px;
       background-position: right 9px center; }
-    select:not([multiple]).input-large {
+    select:not([multiple]).input-lg {
       background-size: 16.875px;
       background-position: right 36px center; }
 
@@ -649,60 +649,70 @@ input[type="checkbox"] {
   display: inline-block;
   width: auto; }
 
-label.form-radio:not(.form-switch),
-label.form-checkbox:not(.form-switch) {
+label.form-radio,
+label.form-checkbox,
+label.form-switch {
   position: relative; }
-  label.form-radio:not(.form-switch) .form-display,
-  label.form-checkbox:not(.form-switch) .form-display {
+  label.form-radio .form-display,
+  label.form-checkbox .form-display,
+  label.form-switch .form-display {
     display: inline-block;
     border: thin solid #E0E0E0;
     position: absolute;
     left: 0;
-    bottom: 0; }
-  label.form-radio:not(.form-switch) input,
-  label.form-checkbox:not(.form-switch) input {
+    bottom: 0;
+    transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  label.form-radio input,
+  label.form-checkbox input,
+  label.form-switch input {
     clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     position: absolute;
     width: 1px; }
-  label.form-radio:not(.form-switch) input:checked + .form-display,
-  label.form-checkbox:not(.form-switch) input:checked + .form-display {
+  label.form-radio input:checked + .form-display,
+  label.form-checkbox input:checked + .form-display,
+  label.form-switch input:checked + .form-display {
     background: #7E57C2; }
-  label.form-radio:not(.form-switch) input:focus + .form-display,
-  label.form-radio:not(.form-switch) input:active + .form-display,
-  label.form-checkbox:not(.form-switch) input:focus + .form-display,
-  label.form-checkbox:not(.form-switch) input:active + .form-display {
+  label.form-radio input:focus + .form-display,
+  label.form-radio input:active + .form-display,
+  label.form-checkbox input:focus + .form-display,
+  label.form-checkbox input:active + .form-display,
+  label.form-switch input:focus + .form-display,
+  label.form-switch input:active + .form-display {
     box-shadow: 0px 0px 0px 2px #e3daf2; }
-  label.form-radio:not(.form-switch),
-  label.form-checkbox:not(.form-switch) {
-    font-size: 18px;
-    padding-left: 27px;
-    padding-right: 18px; }
-    label.form-radio:not(.form-switch) .form-display,
-    label.form-checkbox:not(.form-switch) .form-display {
-      width: 18px;
-      height: 18px; }
-  label.form-radio:not(.form-switch).input-small,
-  label.form-checkbox:not(.form-switch).input-small {
-    font-size: 13.5px;
-    padding-left: 20.25px;
-    padding-right: 9px; }
-    label.form-radio:not(.form-switch).input-small .form-display,
-    label.form-checkbox:not(.form-switch).input-small .form-display {
-      width: 13.5px;
-      height: 13.5px; }
-  label.form-radio:not(.form-switch).input-large,
-  label.form-checkbox:not(.form-switch).input-large {
-    font-size: 22.5px;
-    padding-left: 33.75px;
-    padding-right: 36px; }
-    label.form-radio:not(.form-switch).input-large .form-display,
-    label.form-checkbox:not(.form-switch).input-large .form-display {
-      width: 22.5px;
-      height: 22.5px; }
 
+label.form-radio,
+label.form-checkbox {
+  font-size: 18px;
+  padding-left: 27px;
+  padding-right: 18px; }
+  label.form-radio .form-display,
+  label.form-checkbox .form-display {
+    width: 18px;
+    height: 18px; }
+label.form-radio.input-sm,
+label.form-checkbox.input-sm {
+  font-size: 13.5px;
+  padding-left: 20.25px;
+  padding-right: 9px; }
+  label.form-radio.input-sm .form-display,
+  label.form-checkbox.input-sm .form-display {
+    width: 13.5px;
+    height: 13.5px; }
+label.form-radio.input-lg,
+label.form-checkbox.input-lg {
+  font-size: 22.5px;
+  padding-left: 33.75px;
+  padding-right: 36px; }
+  label.form-radio.input-lg .form-display,
+  label.form-checkbox.input-lg .form-display {
+    width: 22.5px;
+    height: 22.5px; }
+
+label.form-radio .form-display {
+  border-radius: 50%; }
 label.form-radio input:checked + .form-display:after {
   content: "";
   background: #fff;
@@ -714,18 +724,16 @@ label.form-radio input:checked + .form-display:after {
   right: 5px;
   bottom: 5px;
   left: 5px; }
-label.form-radio input:checked.input-small + .form-display:after {
+label.form-radio input:checked.input-sm + .form-display:after {
   top: 4px;
   right: 4px;
   bottom: 4px;
   left: 4px; }
-label.form-radio input:checked.input-large + .form-display:after {
+label.form-radio input:checked.input-lg + .form-display:after {
   top: 6px;
   right: 6px;
   bottom: 6px;
   left: 6px; }
-label.form-radio .form-display {
-  border-radius: 50%; }
 
 label.form-checkbox .form-display {
   border-radius: 10%; }
@@ -742,6 +750,65 @@ label.form-checkbox input:checked + .form-display:after {
   left: 30%;
   top: 10%;
   transform: rotate(45deg); }
+
+label.form-switch .form-display {
+  display: inline-block;
+  background: #ededed;
+  border: thin solid #E0E0E0;
+  box-sizing: content-box;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+label.form-switch input + .form-display:after {
+  content: "";
+  display: block;
+  background: #fff;
+  transition: margin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0; }
+label.form-switch input:checked + .form-display {
+  border-color: #e3daf2; }
+label.form-switch {
+  font-size: 18px;
+  padding-left: 49.5px;
+  padding-right: 18px; }
+  label.form-switch .form-display {
+    width: 36px;
+    height: 18px;
+    border-radius: 9px; }
+label.form-switch.input-sm {
+  font-size: 13.5px;
+  padding-left: 37.125px;
+  padding-right: 9px; }
+  label.form-switch.input-sm .form-display {
+    width: 27px;
+    height: 14px;
+    border-radius: 7px; }
+label.form-switch.input-lg {
+  font-size: 22.5px;
+  padding-left: 61.875px;
+  padding-right: 36px; }
+  label.form-switch.input-lg .form-display {
+    width: 45px;
+    height: 23px;
+    border-radius: 12px; }
+label.form-switch input + .form-display:after {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px; }
+label.form-switch input:checked + .form-display:after {
+  margin-left: 18px; }
+label.form-switch.input-sm input + .form-display:after {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px; }
+label.form-switch.input-sm input:checked + .form-display:after {
+  margin-left: 14px; }
+label.form-switch.input-lg input + .form-display:after {
+  width: 23px;
+  height: 23px;
+  border-radius: 12px; }
+label.form-switch.input-lg input:checked + .form-display:after {
+  margin-left: 23px; }
 
 table.table {
   width: 100%;

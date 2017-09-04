@@ -109,6 +109,20 @@
 
 			}
 
+			input:checked {
+				& + .form-display{
+					&:after{
+						content: "";
+						background: #fff;
+						display: block;
+						position: absolute;
+						border-radius: 50%;
+					}
+				}
+
+				@include make-radio-circle();
+			}
+
 			.form-display{
 				border-radius: 50%;
 			}
@@ -121,6 +135,28 @@
 
 			.form-display{
 				border-radius: 10%;
+			}
+
+			input:checked{
+				& + .form-display{
+					&:after{
+						content: "";
+						background-clip: padding-box;
+					    border: $border-width solid #fff;
+					    border-left-width: 0;
+					    border-top-width: 0;
+					    content: "";
+					    height: 50%;
+					    width: 25%;
+					    // margin-left: -25%;
+					    // margin-top: -25%;
+					    position: absolute;
+					    left: 30%;
+					    top: 10%;
+					    transform: rotate(45deg);
+					    
+					}
+				}
 			}
 		}
 

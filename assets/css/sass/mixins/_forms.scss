@@ -74,6 +74,7 @@
 				// For default buttons with no classes, set default color
 				@if $label == default{
 					& {
+						font-size: $font-size;
 						padding-left: $font-size*1.5;
 						padding-right: split-values($padding,horizontal);
 
@@ -83,6 +84,10 @@
 					}
 				} @else {
 					&.#{$class}-#{$label} {
+						font-size: $font-size;
+						padding-left: $font-size*1.5;
+						padding-right: split-values($padding,horizontal);
+
 						.form-display{
 							@include make-radio-check($font-size,$padding);
 						}
@@ -95,5 +100,32 @@
 		@mixin make-radio-check($size: $font-size-base, $padding: $base $base*2){
 			width: $size;
 			height: $size;
+		}
+
+		// Radio button circle sizes
+		@mixin make-radio-circle($sizes: $form-size-variants, $class: input){
+			@each $label, $size in $sizes{
+				$font-size: 	map-get($size,'font-size');
+				$pos: 				ceil($font-size * 0.25);
+
+				// For default buttons with no classes, set default color
+				@if $label == default{
+					& + .form-display:after{
+						top: $pos;
+						right: $pos;
+						bottom: $pos;
+						left: $pos;
+					}
+				} @else {
+					&.#{$class}-#{$label} {
+						& + .form-display:after{
+							top: $pos;
+							right: $pos;
+							bottom: $pos;
+							left: $pos;
+						}
+					}
+				}
+			}
 		}
 

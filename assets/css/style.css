@@ -677,26 +677,71 @@ label.form-checkbox:not(.form-switch) {
     box-shadow: 0px 0px 0px 2px #e3daf2; }
   label.form-radio:not(.form-switch),
   label.form-checkbox:not(.form-switch) {
+    font-size: 18px;
     padding-left: 27px;
     padding-right: 18px; }
     label.form-radio:not(.form-switch) .form-display,
     label.form-checkbox:not(.form-switch) .form-display {
       width: 18px;
       height: 18px; }
-  label.form-radio:not(.form-switch).input-small .form-display,
-  label.form-checkbox:not(.form-switch).input-small .form-display {
-    width: 13.5px;
-    height: 13.5px; }
-  label.form-radio:not(.form-switch).input-large .form-display,
-  label.form-checkbox:not(.form-switch).input-large .form-display {
-    width: 22.5px;
-    height: 22.5px; }
+  label.form-radio:not(.form-switch).input-small,
+  label.form-checkbox:not(.form-switch).input-small {
+    font-size: 13.5px;
+    padding-left: 20.25px;
+    padding-right: 9px; }
+    label.form-radio:not(.form-switch).input-small .form-display,
+    label.form-checkbox:not(.form-switch).input-small .form-display {
+      width: 13.5px;
+      height: 13.5px; }
+  label.form-radio:not(.form-switch).input-large,
+  label.form-checkbox:not(.form-switch).input-large {
+    font-size: 22.5px;
+    padding-left: 33.75px;
+    padding-right: 36px; }
+    label.form-radio:not(.form-switch).input-large .form-display,
+    label.form-checkbox:not(.form-switch).input-large .form-display {
+      width: 22.5px;
+      height: 22.5px; }
 
+label.form-radio input:checked + .form-display:after {
+  content: "";
+  background: #fff;
+  display: block;
+  position: absolute;
+  border-radius: 50%; }
+label.form-radio input:checked + .form-display:after {
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px; }
+label.form-radio input:checked.input-small + .form-display:after {
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px; }
+label.form-radio input:checked.input-large + .form-display:after {
+  top: 6px;
+  right: 6px;
+  bottom: 6px;
+  left: 6px; }
 label.form-radio .form-display {
   border-radius: 50%; }
 
 label.form-checkbox .form-display {
   border-radius: 10%; }
+label.form-checkbox input:checked + .form-display:after {
+  content: "";
+  background-clip: padding-box;
+  border: 2px solid #fff;
+  border-left-width: 0;
+  border-top-width: 0;
+  content: "";
+  height: 50%;
+  width: 25%;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  transform: rotate(45deg); }
 
 table.table {
   width: 100%;

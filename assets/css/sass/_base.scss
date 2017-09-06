@@ -31,6 +31,19 @@ body{
 	h5,.h5{ font-size: $font-size-h5; }
 	h6,.h6{ font-size: $font-size-h6; }
 
+		// ALIGNMENT
+		.text-center{
+			text-align: center;
+		}
+
+		.text-left{
+			text-align: left;
+		}
+
+		.text-right{
+			text-align: right;
+		}
+
 		// BASIC TEXT STYLES
 
 		b,strong{
@@ -83,6 +96,32 @@ body{
 				font-size: $font-size-blockquote-cite;
 			}
 		}
+
+	// FIGURES
+	figure{
+		margin-bottom: split-values($margin-small,'vertical');
+
+		figcaption{
+			margin-top: split-values($margin-small,'vertical');
+		}
+	}
+
+	// IMAGES
+	img{
+		display: block;
+		clear: both;
+		margin: 0px;
+
+		&.img-responsive{
+			height: auto;
+			max-width: 100%;
+		}
+
+		&.img-fit-cover{
+			background: $gray-lighter;
+			object-fit: cover;
+		}
+	}
 
 	// LINKS
 

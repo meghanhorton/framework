@@ -1,0 +1,21 @@
+  // LABELS
+  @mixin make-labels($colors: $label-color-variants){
+    @each $label, $color in $colors{
+      // For default buttons with no classes, set default color
+      @if $label == default{
+        &{
+          @include make-label(map-get($color,'color'),map-get($color,'text'));
+        }
+      // For other classes, set .btn-[color]
+      } @else {
+        &.label-#{$label}{
+          @include make-label(map-get($color,'color'),map-get($color,'text'));
+        }
+      }
+    }
+  }
+
+  @mixin make-label($color,$text){
+    background: $color;
+    color: $text;
+  }

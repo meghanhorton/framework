@@ -126,6 +126,33 @@
 	$btn-disable-percentage: 		30% !default;
 
 // *******
+// LABELS
+// *******
+
+  $label-color-variants: (
+    default: (
+      color: $gray-light,
+      text: $gray-base
+    ),
+    primary: (
+      color: $color-primary,
+      text: #fff
+    ),
+    success: (
+      color: $color-success,
+      text: #fff
+    ),
+    warning: (
+      color: $color-warning,
+      text: #fff
+    ),
+    danger: (
+      color: $color-danger,
+      text: #fff
+    )
+  ) !default;
+
+// *******
 // FORMS
 // *******
 

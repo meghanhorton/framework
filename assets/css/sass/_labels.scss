@@ -1,0 +1,11 @@
+.label{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 75%;
+  padding: 0.25em 0.4em;
+  border-radius: 0.1rem;
+  vertical-align: baseline;
+
+  @include make-labels();
+}

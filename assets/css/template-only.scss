@@ -1,0 +1,101 @@
+@import 'sass/settings';
+@import 'sass/mixins';
+
+// ******
+// MIXINS
+// ******
+
+// Mixin
+@mixin color_block($name,$color,$text){
+  &.#{to-lower-case($name)}{
+    background: $color;
+    color: $text;
+    
+    &:before{
+      display: block;
+      content: "#{$color}";
+    }
+
+    &:after{
+      display: block;
+      content: "#{$name}";
+    }
+  }
+}
+
+// ******
+// COLORS
+// ******
+
+
+$color_set: (
+  Primary: (
+    color: $color-primary,
+    text: #fff
+  ),
+  Secondary: (
+    color: $color-secondary,
+    text: $color-primary
+  ),
+  Success: (
+    color: $color-success,
+    text: #fff
+  ),
+  Warning: (
+    color: $color-warning,
+    text: #fff
+  ),
+  Danger: (
+    color: $color-danger,
+    text: #fff
+  ),
+  Dark: (
+    color: $gray-dark,
+    text: #fff
+  ),
+  Base: (
+    color: $gray-base,
+    text: #fff
+  ),
+  Light: (
+    color: $gray-light,
+    text: $gray-dark
+  ),
+  Lighter: (
+    color: $gray-lighter,
+    text: $gray-dark
+  )
+);
+
+.colors{
+  .color-row{
+    display: block;
+    margin: $margin-base;
+
+    .color-block{
+      display: inline-block;
+      margin: 0 split-values($margin-base,vertical)/2;
+      width: 10%;
+      min-width: 150px;
+      box-sizing: border-box;
+      padding: $padding-base;
+      font-size: $font-size-base;
+
+      &:before{
+        text-transform: uppercase;
+      }
+
+      &:after{
+        font-size: $font-size-small;
+        opacity: 0.75;
+      }
+
+      @each $name, $set in $color_set{
+        @include color_block($name,map-get($set,'color'),map-get($set,'text'));
+      }
+    }
+  }
+}
+
+
+

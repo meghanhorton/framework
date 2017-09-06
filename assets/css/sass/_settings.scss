@@ -10,16 +10,19 @@
 // ******
 	
 	$background-color:             #FFFFFF !default;
+  $gray-dark:                    #333333 !default;
 	$gray-base:                    #212121 !default;
 	$gray-light:                   #E0E0E0 !default;
 	$gray-lighter:                 #FAFAFA !default;
 
+	$color-primary: 					     #7E57C2 !default;
+  $color-secondary:              lighten($color-primary,40%)!default;
 	$color-danger: 				         #F44336 !default;
 	$color-warning: 			         #FFC107 !default;
 	$color-success: 			         #8BC34A !default;
 
 	// LINK
-	$link-color:                   #7E57C2 !default;
+	$link-color:                   $color-primary !default;
 	$link-hover-color:             darken($link-color,15%) !default;
 	$link-visited-color: 	         $link-color !default;	
 	$link-underline-weight:        $border-width !default;	

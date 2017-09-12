@@ -24,7 +24,7 @@
 
 		@include media-breakpoint-up(lg) {
 			> section{
-				padding-left: $grid-gutter-width-base;
+				padding-left: $grid-gutter-width;
 			}
 		}
 		

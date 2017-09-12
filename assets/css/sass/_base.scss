@@ -2,6 +2,17 @@
 // GLOBAL
 // ******
 
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body{
 	font-family: $font-family-base;
 	font-size: $font-size-base;
@@ -120,6 +131,41 @@ body{
 		&.img-fit-cover{
 			background: $gray-lighter;
 			object-fit: cover;
+		}
+	}
+
+	// VIDEO
+	.video-responsive {
+	  display: block;
+	  overflow: hidden;
+	  padding: 0;
+	  position: relative;
+	  width: 100%;
+
+	  &:before {
+		  content: "";
+		  display: block;
+		  padding-bottom: 56.25%;
+		}
+
+		iframe, object, embed {
+		  border: 0;
+		  bottom: 0;
+		  height: 100%;
+		  left: 0;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		  width: 100%;
+		}
+	}
+
+	video.video-responsive {
+	  height: auto;
+	  max-width: 100%;
+
+	  &:before {
+		  content: none;
 		}
 	}
 

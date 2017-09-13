@@ -16,16 +16,3 @@
 			margin: 0 auto 0 0;
 		}
 	}
-
-// SECTION
-
-	section{
-		margin: $margin-large;
-
-		@include media-breakpoint-up(lg) {
-			> section{
-				padding-left: $grid-gutter-width;
-			}
-		}
-		
-	}

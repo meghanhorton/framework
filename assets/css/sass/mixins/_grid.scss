@@ -42,7 +42,7 @@
 	// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 	// Makes the @content apply to the given breakpoint and narrower.
 	@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-	  $max: breakpoint-max($name, $breakpoints);
+	  $max: breakpoint-max($name, $breakpoints); 
 	  @if $max {
 	    @media (max-width: $max) {
 	      @content;
@@ -56,9 +56,14 @@
 	// Makes the @content apply between the min and max breakpoints
 	@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
 	  @include media-breakpoint-up($lower, $breakpoints) {
-	    @include media-breakpoint-down($upper, $breakpoints) {
-	      @content;
-	    }
+      @if $upper != null{
+        @include media-breakpoint-down($upper, $breakpoints) {
+          @content;
+        }
+      } else{
+        @content;
+      }
+	    
 	  }
 	}
 
@@ -79,14 +84,18 @@
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
-@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+@mixin make-grid-columns($columns: $grid-columns, $gutter-widths: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
   // Common properties for all breakpoints
   %grid-column {
     position: relative;
     width: 100%;
     min-height: 1px; // Prevent columns from collapsing when empty
-    padding-right: ($gutter / 2);
-    padding-left:  ($gutter / 2);
+    // @each $breakpoint, $grid-gutter-width in $gutter-widths {
+    //   @include media-breakpoint-down($breakpoint, $breakpoints) {
+    //     padding-right: ($grid-gutter-width / 2);
+    //     padding-left:  ($grid-gutter-width / 2);
+    //   }
+    // }
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -140,11 +149,17 @@
   }
 }
 
-@mixin make-row() {
+@mixin make-row($gutter-widths: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
   display: flex;
   flex-wrap: wrap;
-  margin-right: ($grid-gutter-width / -2);
-  margin-left:  ($grid-gutter-width / -2);
+  
+  // Adjust margin based on screen size
+  @each $breakpoint, $grid-gutter-width in $gutter-widths {
+    @include media-breakpoint-between($breakpoint, breakpoint-next($breakpoint), $breakpoints) {
+      margin-left: ($grid-gutter-width / -2);
+      margin-right: ($grid-gutter-width / -2);
+    }
+  }
 }
 
 @mixin make-col-ready() {
@@ -154,16 +169,22 @@
   // later on to override this initial width.
   width: 100%;
   min-height: 1px; // Prevent collapsing
-  padding-right: ($grid-gutter-width / 2);
-  padding-left:  ($grid-gutter-width / 2);
 }
 
-@mixin make-col($size, $columns: $grid-columns) {
+@mixin make-col($size, $columns: $grid-columns, $gutter-widths: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
   flex: 0 0 percentage($size / $columns);
   // Add a `max-width` to ensure content within each column does not blow out
   // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
   // do not appear to require this.
   max-width: percentage($size / $columns);
+
+  // Adjust padding based on screen size
+  @each $breakpoint, $grid-gutter-width in $gutter-widths {
+    @include media-breakpoint-between($breakpoint, breakpoint-next($breakpoint), $breakpoints) {
+      padding-right: ($grid-gutter-width / 2);
+      padding-left:  ($grid-gutter-width / 2);
+    }
+  }
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {

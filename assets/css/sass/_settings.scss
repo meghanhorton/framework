@@ -12,7 +12,7 @@
 	$background-color:             #FFFFFF !default;
   $gray-dark:                    #333333 !default;
 	$gray-base:                    #212121 !default;
-	$gray-light:                   #E0E0E0 !default;
+	$gray-light:                   #EEEEEE !default;
 	$gray-lighter:                 #FAFAFA !default;
 
 	$color-primary: 					     #7E57C2 !default;
@@ -210,11 +210,11 @@
 	// Set the number of columns and specify the width of the gutters.
 
 	$grid-columns:               12 !default;
-	$grid-gutter-width:          $base*3 !default;
+	$grid-gutter-width:          $base*2 !default;
 	
   $grid-gutter-widths: (
-	  xs: $grid-gutter-width,
-	  sm: $grid-gutter-width,
+	  xs: $grid-gutter-width/2,
+	  sm: $grid-gutter-width/2,
 	  md: $grid-gutter-width,
 	  lg: $grid-gutter-width,
 	  xl: $grid-gutter-width

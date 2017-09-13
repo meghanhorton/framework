@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>CSS Framework</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/template-only.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <section id="flexbox-grid">
+      <h3>Flexbox Grid</h3>
+
+      <p>Based on <a href="http://getbootstrap.com">Bootstrap 4</a>. Layout includes flexbox based responsive grid system with 12 columns.</p>
+
+      <section class="no-indent">
+        <!-- ALL COLUMNS -->
+        <div class="row row-example row-example-solid">
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+          <div class="col-1"></div>
+        </div>
+      </section>
+
+      <section class="no-indent">
+        <!-- WITH LABELS -->
+        <div class="row row-example row-example-with-labels show-size">
+          <div class="col-12" col-size="100%"></div>
+        </div>
+
+        <div class="row row-example row-example-with-labels show-size">
+          <div class="col-9" col-size="75%"></div>
+        </div>
+        <div class="row row-example row-example-with-labels show-size">
+          <div class="col-6" col-size="50%"></div>
+        </div>
+        <div class="row row-example row-example-with-labels show-size">
+          <div class="col-3" col-size="25%"></div>
+        </div>
+      </section>
+
+      <section class="no-indent">
+        <h4>Offsetting columns</h4>
+
+        <p>Move columns to the right using <code>.offset-md-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.offset-md-4</code> moves <code>.col-md-4</code> over four columns.</p>
+
+        <div class="row row-example row-example-with-labels">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 offset-md-4"></div>
+        </div>
+
+      </section>
+
+      <section class="no-indent" id="push-pull">
+        <h4>Push/pull</h4>
+
+        <p>Easily change the order of our built-in grid columns with <code class="highlighter-rouge">.push-md-*</code> and <code class="highlighter-rouge">.pull-md-*</code> modifier classes.</p>
+
+        <div class="row row-example row-example-with-labels">
+          <div class="col-md-9 push-md-3"></div>
+          <div class="col-md-3 pull-md-9"></div>
+        </div>
+      </section>
+
+    </section>
+  </div>
+</body>

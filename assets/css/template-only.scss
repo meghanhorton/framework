@@ -97,5 +97,65 @@ $color_set: (
   }
 }
 
+// ****
+// GRID
+// ****
+
+.row.row-example{
+  margin-top: split-values($margin-base,vertical);
+  margin-bottom: split-values($margin-base,vertical);
+
+  div[class^="col"]{
+    &:after{
+      content: "";
+      background: $gray-light;
+      display: block;
+      width: 100%;
+      padding: $padding-small;
+      min-height: $base*3;
+      border-radius: $base/3;
+    }
+  }
+
+  &.row-example-with-labels{
+    div[class^="col"]{
+      &:after{      
+        content: attr(class);
+      }
+    }
+
+    &.show-size{
+      div[class^="col"]{
+        &:after{      
+          content: attr(class) " (" attr(col-size) ")";
+        }
+      }
+    }
+  }
+  
+  &.row-example-solid{
+    div[class^="col"]{
+      &:after{
+        background: $color-primary;
+      }
+    }
+  }
+}
+
+// ********
+// SECTIONS
+// ********
+
+  section{
+    margin: $margin-large;
+
+    @include media-breakpoint-up(lg) {
+      > section:not(.no-indent){
+        padding-left: $grid-gutter-width;
+      }
+    }
+    
+  }
+
 
 

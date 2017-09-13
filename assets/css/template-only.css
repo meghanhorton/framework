@@ -78,11 +78,11 @@
         display: block;
         content: "Base"; }
     .colors .color-row .color-block.light {
-      background: #E0E0E0;
+      background: #EEEEEE;
       color: #333333; }
       .colors .color-row .color-block.light:before {
         display: block;
-        content: "#E0E0E0"; }
+        content: "#EEEEEE"; }
       .colors .color-row .color-block.light:after {
         display: block;
         content: "Light"; }
@@ -95,5 +95,29 @@
       .colors .color-row .color-block.lighter:after {
         display: block;
         content: "Lighter"; }
+
+.row.row-example {
+  margin-top: 18px;
+  margin-bottom: 18px; }
+  .row.row-example div[class^="col"]:after {
+    content: "";
+    background: #EEEEEE;
+    display: block;
+    width: 100%;
+    padding: 4.5px 9px;
+    min-height: 27px;
+    border-radius: 3px; }
+  .row.row-example.row-example-with-labels div[class^="col"]:after {
+    content: attr(class); }
+  .row.row-example.row-example-with-labels.show-size div[class^="col"]:after {
+    content: attr(class) " (" attr(col-size) ")"; }
+  .row.row-example.row-example-solid div[class^="col"]:after {
+    background: #7E57C2; }
+
+section {
+  margin: 54px 0; }
+  @media (min-width: 992px) {
+    section > section:not(.no-indent) {
+      padding-left: 18px; } }
 
 /*# sourceMappingURL=template-only.css.map */

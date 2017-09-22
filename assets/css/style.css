@@ -58,20 +58,6 @@ body {
   font-weight: 300;
   line-height: 1.5; }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  border: 0; }
-  .sr-only:after {
-    display: none; }
-
 p {
   margin: 18px 0; }
 
@@ -213,6 +199,20 @@ a:not(.btn) {
     color: #593696; }
     a:not(.btn):hover:after {
       background: #593696; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0; }
+  .sr-only:after {
+    display: none !important; }
 
 ul, ol {
   -webkit-margin-before: 0.5em;

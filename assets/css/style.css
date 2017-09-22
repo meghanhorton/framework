@@ -69,6 +69,8 @@ body {
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   border: 0; }
+  .sr-only:after {
+    display: none; }
 
 p {
   margin: 18px 0; }

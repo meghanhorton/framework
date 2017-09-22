@@ -32,6 +32,10 @@ body{
     -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
     border: 0;
+
+    &:after{
+    	display: none;
+    }
 	}
 
 	// PARAGRAPH

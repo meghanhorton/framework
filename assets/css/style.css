@@ -3545,6 +3545,36 @@ a.btn, input[type="button"].btn, button.btn {
           border-color: #9b7cd0; }
         a.btn:disabled:not(.btn-link):not(:disabled):not(.disabled):active, a.btn.disabled:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn:disabled:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn.disabled:not(.btn-link):not(:disabled):not(.disabled):active, button.btn:disabled:not(.btn-link):not(:disabled):not(.disabled):active, button.btn.disabled:not(.btn-link):not(:disabled):not(.disabled):active {
           outline: solid white; }
+  a.btn.btn-secondary, input[type="button"].btn.btn-secondary, button.btn.btn-secondary {
+    background: transparent;
+    color: #f1edf8; }
+    a.btn.btn-secondary:not(.btn-link), input[type="button"].btn.btn-secondary:not(.btn-link), button.btn.btn-secondary:not(.btn-link) {
+      border-color: #f1edf8; }
+      a.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):hover, input[type="button"].btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):hover, button.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):hover {
+        color: #fff;
+        background: #b7a2dd;
+        border-color: #b7a2dd; }
+      a.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):active, a.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled).active, input[type="button"].btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled).active, button.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):active, button.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled).active {
+        color: #fff;
+        background: #b7a2dd;
+        border-color: #b7a2dd; }
+      a.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):active, button.btn.btn-secondary:not(.btn-link):not(:disabled):not(.disabled):active {
+        outline: solid white; }
+    a.btn.btn-secondary:disabled, a.btn.btn-secondary.disabled, input[type="button"].btn.btn-secondary:disabled, input[type="button"].btn.btn-secondary.disabled, button.btn.btn-secondary:disabled, button.btn.btn-secondary.disabled {
+      background: transparent;
+      color: white; }
+      a.btn.btn-secondary:disabled:not(.btn-link), a.btn.btn-secondary.disabled:not(.btn-link), input[type="button"].btn.btn-secondary:disabled:not(.btn-link), input[type="button"].btn.btn-secondary.disabled:not(.btn-link), button.btn.btn-secondary:disabled:not(.btn-link), button.btn.btn-secondary.disabled:not(.btn-link) {
+        border-color: white; }
+        a.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):hover, a.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):hover, input[type="button"].btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):hover, input[type="button"].btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):hover, button.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):hover, button.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):hover {
+          color: #fff;
+          background: #c6b4e4;
+          border-color: #c6b4e4; }
+        a.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):active, a.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled).active, a.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):active, a.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled).active, input[type="button"].btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled).active, input[type="button"].btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled).active, button.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):active, button.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled).active, button.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):active, button.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled).active {
+          color: #fff;
+          background: #c6b4e4;
+          border-color: #c6b4e4; }
+        a.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):active, a.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):active, input[type="button"].btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):active, button.btn.btn-secondary:disabled:not(.btn-link):not(:disabled):not(.disabled):active, button.btn.btn-secondary.disabled:not(.btn-link):not(:disabled):not(.disabled):active {
+          outline: solid white; }
   a.btn.btn-success, input[type="button"].btn.btn-success, button.btn.btn-success {
     background: transparent;
     color: #8BC34A; }
@@ -3648,6 +3678,19 @@ a.btn, input[type="button"].btn, button.btn {
       background: #d4c7eb;
       color: #fff;
       border-color: transparent; }
+  a.btn.btn-solid.btn-secondary, input[type="button"].btn.btn-solid.btn-secondary, button.btn.btn-solid.btn-secondary {
+    background: #f1edf8;
+    color: #fff;
+    border-color: transparent; }
+    a.btn.btn-solid.btn-secondary:not(:disabled):not(.disabled):hover, input[type="button"].btn.btn-solid.btn-secondary:not(:disabled):not(.disabled):hover, button.btn.btn-solid.btn-secondary:not(:disabled):not(.disabled):hover {
+      background: #b7a2dd;
+      color: #fff; }
+    a.btn.btn-solid.btn-secondary:not(:disabled):not(.disabled):active, input[type="button"].btn.btn-solid.btn-secondary:not(:disabled):not(.disabled):active, button.btn.btn-solid.btn-secondary:not(:disabled):not(.disabled):active {
+      outline: solid white; }
+    a.btn.btn-solid.btn-secondary:disabled, a.btn.btn-solid.btn-secondary.disabled, input[type="button"].btn.btn-solid.btn-secondary:disabled, input[type="button"].btn.btn-solid.btn-secondary.disabled, button.btn.btn-solid.btn-secondary:disabled, button.btn.btn-solid.btn-secondary.disabled {
+      background: white;
+      color: #fff;
+      border-color: transparent; }
   a.btn.btn-solid.btn-success, input[type="button"].btn.btn-solid.btn-success, button.btn.btn-solid.btn-success {
     background: #8BC34A;
     color: #fff;
@@ -3726,6 +3769,40 @@ a.btn, input[type="button"].btn, button.btn {
         content: "";
         position: absolute;
         background: #d4c7eb;
+        display: block;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 2px;
+        z-index: -1;
+        transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  a.btn.btn-link.btn-link.btn-secondary, input[type="button"].btn.btn-link.btn-link.btn-secondary, button.btn.btn-link.btn-link.btn-secondary {
+    text-decoration: none;
+    text-shadow: -2px 2px 0px #FFFFFF, 2px 2px 0px #FFFFFF;
+    white-space: nowrap;
+    position: relative; }
+    a.btn.btn-link.btn-link.btn-secondary:after, input[type="button"].btn.btn-link.btn-link.btn-secondary:after, button.btn.btn-link.btn-link.btn-secondary:after {
+      content: "";
+      position: absolute;
+      background: #f1edf8;
+      display: block;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 2px;
+      z-index: -1;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    a.btn.btn-link.btn-link.btn-secondary:hover:after, input[type="button"].btn.btn-link.btn-link.btn-secondary:hover:after, button.btn.btn-link.btn-link.btn-secondary:hover:after {
+      width: 0; }
+    a.btn.btn-link.btn-link.btn-secondary:disabled, a.btn.btn-link.btn-link.btn-secondary.disabled, input[type="button"].btn.btn-link.btn-link.btn-secondary:disabled, input[type="button"].btn.btn-link.btn-link.btn-secondary.disabled, button.btn.btn-link.btn-link.btn-secondary:disabled, button.btn.btn-link.btn-link.btn-secondary.disabled {
+      text-decoration: none;
+      text-shadow: -2px 2px 0px #FFFFFF, 2px 2px 0px #FFFFFF;
+      white-space: nowrap;
+      position: relative; }
+      a.btn.btn-link.btn-link.btn-secondary:disabled:after, a.btn.btn-link.btn-link.btn-secondary.disabled:after, input[type="button"].btn.btn-link.btn-link.btn-secondary:disabled:after, input[type="button"].btn.btn-link.btn-link.btn-secondary.disabled:after, button.btn.btn-link.btn-link.btn-secondary:disabled:after, button.btn.btn-link.btn-link.btn-secondary.disabled:after {
+        content: "";
+        position: absolute;
+        background: white;
         display: block;
         left: 0;
         bottom: -1px;

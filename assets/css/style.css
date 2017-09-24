@@ -3512,7 +3512,9 @@ a.btn, input[type="button"].btn, button.btn {
   border-width: 2px;
   border-style: solid;
   transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none; }
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box; }
   a.btn, input[type="button"].btn, button.btn {
     background: transparent;
     color: #7E57C2; }

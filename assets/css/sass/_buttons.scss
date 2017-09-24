@@ -17,6 +17,8 @@ a,input[type="button"],button{
 			color $transition-timing $transition-timing-function,
 			border-color $transition-timing $transition-timing-function;
 		outline: none;
+		text-decoration: none;
+		box-sizing: border-box;
 
 		// Colors
 		@include make-button-outline($btn-color-variants);

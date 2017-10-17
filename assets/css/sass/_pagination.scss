@@ -1,0 +1,67 @@
+// **********
+// PAGINATION
+// **********
+
+.pagination{
+  color: $pagination-color;
+  font-size: $pagination-font-size;
+  margin: $pagination-margin;
+  padding: $pagination-padding;
+  text-align: center;
+  width: 100%;
+  border-top: $pagination-separator-weight solid $pagination-separator-color;
+
+  .page_number{
+    padding: 0 split-values($padding-base,horizontal)/2;
+
+    .page{
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .previous,.next,.first,.last{
+    padding: 0 split-values($padding-small,horizontal)/2;
+    transition: color $transition-timing $transition-timing-function;
+
+    // Colors for default inactive
+    &,&:hover{
+      color: $pagination-inactive-color;
+      cursor: disabled;
+    }
+
+    // Disables underlines
+    &:after{
+      display: none;
+    }
+
+    // Uses ZMDI styles
+    &:before{
+      @extend .#{$zmdi-icon-prefix};
+    }
+  }
+
+  a.previous,a.next,a.first,a.last{
+    color: $pagination-color;
+    cursor: pointer;
+
+    &:hover{ color: $pagination-hover-color;}
+  }
+
+  .first:before{
+    content: $md-iconset-chevron-left + $md-iconset-chevron-left;
+  }
+
+  .previous:before{
+    content: $md-iconset-chevron-left;
+  }
+
+  .next:before{
+    content: $md-iconset-chevron-right;
+  }
+
+  .last:before{
+    content: $md-iconset-chevron-right + $md-iconset-chevron-right;
+  }
+
+
+}

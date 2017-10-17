@@ -37,6 +37,10 @@
 			&:not(.btn-link){
 				border-color: $color;
 
+        &:focus{
+          outline-color: $color;
+        }
+
 				@if $disabled == false {
           &:not(:disabled):not(.disabled){
   					&:hover{
@@ -99,6 +103,10 @@
   				&:active{
   					outline: solid lighten($color,35%);
   				}
+
+          &:focus{
+            outline-color: $color;
+          }
         }
 			}
 		}

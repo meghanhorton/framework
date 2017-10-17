@@ -3,6 +3,10 @@
 // *******
 
 a,input[type="button"],button{  
+	&,&:active,&:focus{
+		outline-color: $color-primary;
+	}
+
 	&.btn{
 		display: block;
 		margin: $margin-small;
@@ -16,7 +20,7 @@ a,input[type="button"],button{
 			background $transition-timing $transition-timing-function,
 			color $transition-timing $transition-timing-function,
 			border-color $transition-timing $transition-timing-function;
-		outline: none;
+		
 		text-decoration: none;
 		box-sizing: border-box;
 

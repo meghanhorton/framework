@@ -197,6 +197,20 @@ body{
 		}
 	}
 
+	a.img{
+		&:focus{
+			outline-color: $gray-light;
+		}
+	}
+
+	// Selected text
+	::selection{
+		background: $selection-bg;
+		color: $selection-color;
+
+		a{ text-shadow: none!important; }
+	}
+
 	// Screen Reader
 	.sr-only{
 		position: absolute;
